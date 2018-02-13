@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov RecordGroup="WTVTRTG_RG" Height="500" Width="400" Title="TRTG Code Validation - WTVTRTG" Name="WTVTRTG_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="TRTG Code" DataMember="WTVTRTG_CODE"/>
+        </Columns>
+    </Lov>
+</Lovs>

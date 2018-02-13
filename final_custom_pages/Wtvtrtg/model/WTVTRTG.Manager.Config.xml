@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WTVTRTG.Manager.Config" name="WTVTRTG">
+		<items>
+			<item name="WTVTRTG_CODE" logicalName="wtvtrtgCode" type="String" physicalName="WTVTRTG_CODE" key="true">
+			</item>
+			<item name="WTVTRTG_XPATH" logicalName="wtvtrtgXpath" type="String" physicalName="WTVTRTG_XPATH">
+			</item>
+			<item name="WTVTRTG_CREATE_USER" logicalName="wtvtrtgCreateUser" type="String" physicalName="WTVTRTG_CREATE_USER">
+			</item>
+			<item name="WTVTRTG_CREATE_DATE" logicalName="wtvtrtgCreateDate" type="java.util.Date" physicalName="WTVTRTG_CREATE_DATE">
+			</item>
+			<item name="WTVTRTG_USER" logicalName="wtvtrtgUser" type="String" physicalName="WTVTRTG_USER">
+			</item>
+			<item name="WTVTRTG_ACTIVITY_DATE" logicalName="wtvtrtgActivityDate" type="java.util.Date" physicalName="WTVTRTG_ACTIVITY_DATE">
+			</item>
+			<item name="WTVTRTG_DATA_ORIGIN" logicalName="wtvtrtgDataOrigin" type="String" physicalName="WTVTRTG_DATA_ORIGIN">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wtvtrtg.model.WtvtrtgAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[wtvtrtg_code]]></defaultOrderByClause>
+				
+	</manager>
+</b:beans>

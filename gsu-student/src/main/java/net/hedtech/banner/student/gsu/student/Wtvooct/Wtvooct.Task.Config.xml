@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- base task definition -->
+	<b:import resource="classpath:/net/hedtech/general/common/forms/Base.Task.Config.xml"/>
+	<!-- task parts -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/Goqolib.TaskPart.Config.xml"/>
+	<!-- library resources -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqgmnu/GOQGMNU.Library.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>
+	<!-- model definition -->
+	<b:import resource="classpath:/net/hedtech/banner/student/gsu/student/Wtvooct/model/WTVOOCT.Model.Config.xml"/>
+	
+	<task id="WTVOOCT.Task.Config" name="WTVOOCT">
+		<baseTaskConfiguration config="BASE.Task.Config"/>		
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.student.gsu.student.Wtvooct.WtvooctTask</taskClass>		
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/student/gsu/student/Wtvooct/WtvooctStruct.xml</taskResources>
+		
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.student.gsu.student.Wtvooct.services.WtvooctServices</services>
+			<!-- Package Beans-->
+			<packages>
+				<package name="G$_NAV_BLOCK">net.hedtech.general.common.libraries.Goqolib.controller.GNavBlockController</package>
+				<package name="G$_KEY_BLOCK_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GKeyBlockClass</package>
+				<package name="G$_ICON_BTN_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GIconBtnClass</package>
+				<package name="G$_VPDI_BLOCK">net.hedtech.general.common.libraries.Goqolib.controller.GVpdiBlockController</package>
+				<package name="G$_DATE_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GDateClass</package>
+				<package name="G$_FORM_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GFormClass</package>
+				<package name="G$_VAL_FORM_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GValFormClass</package>
+				<package name="G$_CODE_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GCodeClass</package>
+				<package name="G$_APPL_FORM_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GApplFormClass</package>
+				<package name="G$_INQ_FORM_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GInqFormClass</package>
+			</packages>
+			<attachedLibraries>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQGMNU.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		
+		<!-- model -->
+		<formModelConfiguration config="WTVOOCT.Model.Config"/>
+		
+		<formController>net.hedtech.banner.student.gsu.student.Wtvooct.controller.WtvooctFormController</formController>
+		<blockControllers>
+			<block name="G$_SDISP">net.hedtech.general.common.libraries.Goqolib.controller.GSdispController</block>
+			<block name="FORM_HEADER">net.hedtech.banner.student.gsu.student.Wtvooct.controller.FormHeaderController</block>
+			<block name="WTVOOCT">net.hedtech.banner.student.gsu.student.Wtvooct.controller.WtvooctController</block>
+			<block name="G$_SDKEY">net.hedtech.general.common.libraries.Goqolib.controller.GSdkeyController</block>
+		</blockControllers>
+	</task>
+</b:beans>

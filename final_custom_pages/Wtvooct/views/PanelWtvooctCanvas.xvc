@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <panel class="ContentCanvas" height="500px" menu="G$_DEFAULT_PM" name="WTVOOCT_CANVAS" width="100%">
+        <interactionBlock name="WTVOOCT"/>
+        <collapsiblepanel label="mainWindow.title" name="cpanelwtvooct" width="100%">
+        <gridview block="WTVOOCT" height="300px" name="grdWtvooct" width="100%">
+            <viewheader>
+                <viewcolumn datatype="String" label="Code" maxlength="2" member="WTVOOCT_CODE" name="wtvooctCode" case="upper" required="true" width="50px"/>
+                <viewcolumn datatype="String" label="Description" maxlength="120" member="WTVOOCT_DESC" name="wtvooctDesc" required="true" width="500px"/>
+                <viewcolumn datatype="Number" label="Completion Rank" maxlength="3" member="WTVOOCT_COMPLETION_RANK" name="wtvooctCompletionRank" required="true" textalign="right" width="100px"/>
+                <viewcolumn datatype="String" label="Manual" maxlength="1" member="WTVOOCT_MANUAL_IND" name="wtvooctManualInd" case="upper" required="true" width="50px"/>
+                <viewcolumn datatype="String" label="Status" maxlength="1" member="WTVOOCT_STATUS_IND" name="wtvooctStatusInd" case="upper" width="50px"/>
+                 <viewcolumn datatype="String" label="User" maxlength="30" member="WTVOOCT_USER_ID" name="wtvooctUserId" width="210px"/>
+                <viewcolumn datatype="Date" editable="false" label="Activity Date" member="WTVOOCT_ACTIVITY_DATE" name="wtvooctActivityDate" width="50px">
+                </viewcolumn>
+            </viewheader>
+        </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

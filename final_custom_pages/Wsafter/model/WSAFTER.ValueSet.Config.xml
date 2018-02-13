@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="WTVFGRP.ValueSet.Config" name="WTVFGRP_RG">
+		<columns>
+			<column name="WTVFGRP_CODE" type="String" size="0"/>
+			<column name="WTVFGRP_DESC" type="String" size="0"/>
+		</columns>
+		<query><![CDATA[select wtvfgrp_code, wtvfgrp_desc
+from wtvfgrp
+order by wtvfgrp_code]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+</b:beans>

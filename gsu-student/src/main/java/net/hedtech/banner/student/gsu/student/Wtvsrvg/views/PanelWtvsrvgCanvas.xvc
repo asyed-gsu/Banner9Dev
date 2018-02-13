@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <panel class="ContentCanvas" height="500px" menu="G$_DEFAULT_PM" name="WTVSRVG_CANVAS" width="100%">
+        <interactionBlock name="WTVSRVG"/>
+        <collapsiblepanel label="Survey Group Form WTVSRVG" name="cpanelWtvsrvg" width="100%">
+            <gridview block="WTVSRVG" name="grdWtvsrvg" width="100%">
+                <viewheader>
+                    <viewcolumn datatype="String" label="Code" maxlength="3" member="WTVSRVG_CODE" required="true" width="50px" case="upper"/>
+                    <viewcolumn datatype="String" label="Description" member="WTVSRVG_DESC" required="true" width="210px"/>
+                    <viewcolumn datatype="Date" label="Activity Date" formatmask="DD-MON-YYYY" case="upper" member="WTVSRVG_ACTIVITY_DATE" required="false" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

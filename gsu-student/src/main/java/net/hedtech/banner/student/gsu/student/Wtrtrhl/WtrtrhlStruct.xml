@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Wtrtrhl/WtrtrhlAlerts.xml" LovDataPath="/net/hedtech/banner/student/gsu/student/Wtrtrhl/WtrtrhlLovs.xml" Name="WTRTRHL">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Title="Transcript Hold Rules" Url="net/hedtech/banner/student/gsu/student/Wtrtrhl/views/ViewMainWindow">
+            <ContentCanvas Id="WTRTRHL_CANVAS"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="WTRTRHL" MultiRecord="true">
+            <Item CanvasName="WTRTRHL_CANVAS" Id="WTRTRHL_TRTG_CODE" Lov="WTVTRTG_LOV" AllowUpdate="false" Type="TextItem"/>
+            <Item CanvasName="WTRTRHL_CANVAS" Id="WTRTRHL_TRTG_VALUE" Type="TextItem"/>
+            <Item CanvasName="WTRTRHL_CANVAS" Id="WTRTRHL_HOLD_GRDE_IND" Type="TextItem"/>
+            <Item CanvasName="WTRTRHL_CANVAS" Id="WTRTRHL_HOLD_DEGR_IND" Type="TextItem"/>
+            <Item CanvasName="WTRTRHL_CANVAS" Enabled="false" Navigable="false" AllowUpdate="false" Id="WTRTRHL_CREATE_USER" Type="TextItem"/>
+            <Item CanvasName="WTRTRHL_CANVAS" Enabled="false" Navigable="false" AllowUpdate="false" Id="WTRTRHL_CREATE_DATE" Type="TextItem"/>
+            <Item CanvasName="WTRTRHL_CANVAS" Enabled="false" Navigable="false" AllowUpdate="false" Id="WTRTRHL_USER" Type="TextItem"/>
+            <Item CanvasName="WTRTRHL_CANVAS" Enabled="false" Navigable="false" AllowUpdate="false" Id="WTRTRHL_ACTIVITY_DATE" Type="TextItem"/>
+        </Block>
+    </Logic>
+</FormStructure>

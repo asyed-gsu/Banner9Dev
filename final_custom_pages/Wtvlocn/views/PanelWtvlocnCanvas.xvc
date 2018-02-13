@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <panel class="ContentCanvas" height="500px" menu="G$_DEFAULT_PM" name="WTVLOCN_CANVAS" width="100%">
+        <interactionBlock name="WTVLOCN"/>
+        <collapsiblepanel label="mainWindow.title" name="cpanelWtvlocn" width="100%">
+            <gridview block="WTVLOCN" name="grdWtvlocn" width="100%">
+                <viewheader>
+                    <viewcolumn case="upper" datatype="String" label="Code" maxlength="30" member="WTVLOCN_CODE" required="true" width="210px"/>
+                    <viewcolumn datatype="String" label="Description" maxlength="60" member="WTVLOCN_DESC" required="true" width="420px"/>
+                    <viewcolumn datatype="Date" editable="false" label="Activity Date" member="WTVLOCN_ACTIVITY_DATE" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" editable="false" label="User Id" maxlength="30" member="WTVLOCN_USER_ID" width="210px"/>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

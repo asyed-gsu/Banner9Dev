@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WTRTRHL.Manager.Config" name="WTRTRHL">
+		<items>
+			<item name="WTRTRHL_TRTG_CODE" logicalName="wtrtrhlTrtgCode" type="String" physicalName="WTRTRHL_TRTG_CODE" key="true">
+			</item>
+			<item name="WTRTRHL_TRTG_VALUE" logicalName="wtrtrhlTrtgValue" type="String" physicalName="WTRTRHL_TRTG_VALUE" key="true">
+			</item>
+			<item name="WTRTRHL_HOLD_GRDE_IND" logicalName="wtrtrhlHoldGrdeInd" type="String" physicalName="WTRTRHL_HOLD_GRDE_IND">
+			</item>
+			<item name="WTRTRHL_HOLD_DEGR_IND" logicalName="wtrtrhlHoldDegrInd" type="String" physicalName="WTRTRHL_HOLD_DEGR_IND">
+			</item>
+			<item name="WTRTRHL_CREATE_USER" logicalName="wtrtrhlCreateUser" type="String" physicalName="WTRTRHL_CREATE_USER">
+			</item>
+			<item name="WTRTRHL_CREATE_DATE" logicalName="wtrtrhlCreateDate" type="java.util.Date" physicalName="WTRTRHL_CREATE_DATE">
+			</item>
+			<item name="WTRTRHL_USER" logicalName="wtrtrhlUser" type="String" physicalName="WTRTRHL_USER">
+			</item>
+			<item name="WTRTRHL_ACTIVITY_DATE" logicalName="wtrtrhlActivityDate" type="java.util.Date" physicalName="WTRTRHL_ACTIVITY_DATE">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wtrtrhl.model.WtrtrhlAdapter</adapterClass>
+		
+		<defaultOrderByClause><![CDATA[wtrtrhl_trtg_code]]></defaultOrderByClause>
+		
+		
+		
+		
+	</manager>
+</b:beans>

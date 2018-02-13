@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov RecordGroup="WTVFGRP_RG" Height="500" Width="400" Title="Optional Fee Group (WTVFGRP)" Name="WTVFGRP_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="Code" DataMember="WTVFGRP_CODE"/>
+            <Column Width="50" Title="Desc" DataMember="WTVFGRP_DESC"/>
+        </Columns>
+    </Lov> 
+</Lovs>

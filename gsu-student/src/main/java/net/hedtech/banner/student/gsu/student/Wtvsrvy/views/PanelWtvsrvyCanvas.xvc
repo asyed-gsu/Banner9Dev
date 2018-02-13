@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="vertical">
+    <panel class="ContentCanvas" height="500px" menu="G$_DEFAULT_PM" name="WTVSRVY_CANVAS" width="100%">
+        <interactionBlock name="WTVSRVY"/>
+        <collapsiblepanel label="Survey Validation Form WTVSRVY" name="cpanelWtvsrvy" width="100%">
+            <gridview block="WTVSRVY" name="grdWtvsrvy" width="100%">
+                <viewheader>
+                    <viewcolumn datatype="String" label="Code" maxlength="6" member="WTVSRVY_CODE" required="true" width="50px" case="upper" />
+                    <viewcolumn datatype="String" label="Description" member="WTVSRVY_DESC" required="true" width="210px"/>
+                    <viewcolumn datatype="String" label="Type" maxlength="6" member="WTVSRVY_TYPE" required="false" width="50px" case="upper"/>
+                    <viewcolumn datatype="Date" label="Activity Date" formatmask="DD-MON-YYYY" case="upper" member="WTVSRVY_ACTIVITY_DATE" required="false" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

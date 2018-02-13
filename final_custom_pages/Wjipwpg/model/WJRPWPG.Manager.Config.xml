@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WJRPWPG.Manager.Config" name="WJRPWPG">
+		<items>
+			<item name="WJRPWPG_AIDY_CODE" logicalName="wjrpwpgAidyCode" type="java.lang.String" physicalName="WJRPWPG_AIDY_CODE">
+				<value>
+					<item name="AIDY_CODE" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="WJRPWPG_PIDM" logicalName="wjrpwpgPidm" type="java.math.BigDecimal" physicalName="WJRPWPG_PIDM">
+				<value>
+					<item name="PIDM" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="WJRPWPG_POSN" logicalName="wjrpwpgPosn" type="java.lang.String" physicalName="WJRPWPG_POSN">
+			</item>
+			<item name="WJRPWPG_SUFF" logicalName="wjrpwpgSuff" type="java.lang.String" physicalName="WJRPWPG_SUFF">
+			</item>
+			<item name="WJRPWPG_PAY_END_DATE" logicalName="wjrpwpgPayEndDate" type="java.util.Date" physicalName="WJRPWPG_PAY_END_DATE">
+			</item>
+			<item name="WJRPWPG_HRS" logicalName="wjrpwpgHrs" type="java.math.BigDecimal" physicalName="WJRPWPG_HRS">
+			</item>
+			<item name="WJRPWPG_RATE" logicalName="wjrpwpgRate" type="java.math.BigDecimal" physicalName="WJRPWPG_RATE">
+			</item>
+			<item name="WJRPWPG_AMT" logicalName="wjrpwpgAmt" type="java.math.BigDecimal" physicalName="WJRPWPG_AMT">
+			</item>
+			<item name="WJRPWPG_PERIOD" logicalName="wjrpwpgPeriod" type="java.lang.String" physicalName="WJRPWPG_PERIOD">
+			</item>
+			<item name="DISPLAY_PLACE_CDE" logicalName="displayPlaceCde" type="String" virtual="true">
+			</item>
+			<item name="DISPLAY_FUND_CODE" logicalName="displayFundCode" type="String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wjipwpg.model.WjrpwpgAdapter</adapterClass>
+		
+		<defaultWhereClause><![CDATA[WHERE wjrpwpg_aidy_code = :AIDYEAR and wjrpwpg_pidm = :PIDM]]></defaultWhereClause>
+		<defaultOrderByClause><![CDATA[wjrpwpg_pay_end_date desc]]></defaultOrderByClause>
+		
+		
+		
+	</manager>
+</b:beans>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WORLOCN.Manager.Config" name="WORLOCN">
+		<items>
+			<item name="WORLOCN_LOCN_CODE" logicalName="worlocnLocnCode" type="String" physicalName="WORLOCN_LOCN_CODE">
+				<value>
+					<item name="LOCN_CODE" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="WORLOCN_TPRT_CODE" logicalName="worlocnTprtCode" type="String" physicalName="WORLOCN_TPRT_CODE">
+			</item>
+			<item name="WORLOCN_OFFICIAL_IND" logicalName="worlocnOfficialInd" type="String" physicalName="WORLOCN_OFFICIAL_IND">
+			</item>
+			<item name="WORLOCN_PRNT_CODE" logicalName="worlocnPrntCode" type="String" physicalName="WORLOCN_PRNT_CODE">
+			</item>
+			<item name="WORLOCN_USER" logicalName="worlocnUser" type="String" physicalName="WORLOCN_USER">
+			</item>
+			<item name="WORLOCN_ACTIVITY_DATE" logicalName="worlocnActivityDate" type="java.util.Date" physicalName="WORLOCN_ACTIVITY_DATE">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Woalocn.model.WorlocnAdapter</adapterClass>
+		<!-- DefaultWhereClause needs completion on user end: -->
+		<defaultWhereClause><![CDATA[WHERE worlocn_locn_code = :LOCN]]>
+		</defaultWhereClause>
+		
+		<defaultOrderByClause><![CDATA[worlocn_tprt_code]]></defaultOrderByClause>
+		
+		<queryAllRecords>true</queryAllRecords>
+		
+		
+		
+		
+	</manager>
+</b:beans>

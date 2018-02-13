@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Woawdpr/WoawdprAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/student/gsu/student/Woawdpr/WoawdprLovs.xml" Name="WOAWDPR">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Title="mainWindow.title" Url="net/hedtech/banner/student/gsu/student/Woawdpr/views/ViewMainWindow">
+            <StackedCanvas Id="MAIN_CANVAS"/>
+            <ContentCanvas Id="KEY_BLOCK_CANVAS"/>
+            <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="BUTTON_CONTROL_BLOCK">
+            <Item DataType="String" Id="CHECK_KEYS" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEYBLOC_TERM_CODE_LBT" MaxLength="13" Navigable="false" Type="Button" />
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEYBLOC_LEVL_CODE_LBT" MaxLength="13" Navigable="false"  Type="Button" />
+        </Block>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="KEY_BLOCK">
+            <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Enabled="true" Id="KEYBLOC_TERM_CODE" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" Type="Button"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" Type="Button" Visible="false"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="TERM_DESC" Type="DisplayItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Enabled="true" Id="KEYBLOC_LEVL_CODE" Lov="STVLEVL_LOV" MaxLength="30" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="LEVL_DESC" Type="DisplayItem"/>
+        </Block>
+        <Block Id="WORWDPR" MultiRecord="true">
+            <Item  Id="WORWDPR_SEQ_NO" Required="true" Type="TextItem"/>
+            <Item Id="WORWDPR_TERM_CODE" Required="true" Type="TextItem"/>
+            <Item  Id="WORWDPR_LEVL_CODE" Required="true" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Id="WORWDPR_SUBJ_CODE_A" Required="true" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Id="WORWDPR_CRSE_NUMB_A" Required="true" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Id="WORWDPR_SUBJ_CODE_B" Required="true" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Id="WORWDPR_CRSE_NUMB_B" Required="true" Type="TextItem"/>
+            <Item AllowUpdate="false" Enabled="false" CanvasName="MAIN_CANVAS" Id="WORWDPR_USER_ID" Type="TextItem"/>
+            <Item AllowUpdate="false" Enabled="false" CanvasName="MAIN_CANVAS" Id="WORWDPR_ACTIVITY_DATE" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Enabled="false" Id="COURSE_A_DESC" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Enabled="false" Id="COURSE_B_DESC" Type="TextItem"/>
+        </Block>
+    </Logic>
+</FormStructure>

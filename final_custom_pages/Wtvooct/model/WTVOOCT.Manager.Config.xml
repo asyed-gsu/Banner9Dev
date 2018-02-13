@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WTVOOCT.Manager.Config" name="STUPRD.WTVOOCT">
+		<items>
+			<item name="WTVOOCT_CODE" logicalName="wtvooctCode" type="java.lang.String" physicalName="WTVOOCT_CODE" key="true">
+			</item>
+			<item name="WTVOOCT_DESC" logicalName="wtvooctDesc" type="java.lang.String" physicalName="WTVOOCT_DESC">
+			</item>
+			<item name="WTVOOCT_COMPLETION_RANK" logicalName="wtvooctCompletionRank" type="java.math.BigDecimal" physicalName="WTVOOCT_COMPLETION_RANK">
+			</item>
+			<item name="WTVOOCT_MANUAL_IND" logicalName="wtvooctManualInd" type="java.lang.String" physicalName="WTVOOCT_MANUAL_IND">
+			</item>
+			<item name="WTVOOCT_STATUS_IND" logicalName="wtvooctStatusInd" type="java.lang.String" physicalName="WTVOOCT_STATUS_IND">
+			</item>
+			<item name="WTVOOCT_USER_ID" logicalName="wtvooctUserId" type="java.lang.String" physicalName="WTVOOCT_USER_ID">
+				<value>
+					<formParameter name="G$_PREFERENCES"/>
+				</value>
+			</item>
+			<item name="WTVOOCT_ACTIVITY_DATE" logicalName="wtvooctActivityDate" type="java.util.Date" physicalName="WTVOOCT_ACTIVITY_DATE">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wtvooct.model.WtvooctAdapter</adapterClass>
+		
+		<defaultOrderByClause><![CDATA[wtvooct_code]]></defaultOrderByClause>
+		
+		
+		
+	</manager>
+</b:beans>

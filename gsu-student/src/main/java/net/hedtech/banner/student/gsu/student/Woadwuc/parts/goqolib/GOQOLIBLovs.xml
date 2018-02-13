@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Name="G$_EXT_SEARCH_LOV">
+		<Columns>
+			<Column DataMember="NAME" />
+			<Column DataMember="ID" />
+		</Columns>
+	</Lov>
+</Lovs>
