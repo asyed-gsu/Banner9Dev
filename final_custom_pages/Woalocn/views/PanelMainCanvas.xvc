@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <interactionBlock name="WORLOCN"/>
+    <panel class="StackedCanvas" id="MAIN_CANVAS" name="MAIN_CANVAS" width="100%">
+        <collapsiblepanel label="mainWindow.title" name="cpanelWorlocn" width="100%">
+            <gridview block="WORLOCN" name="grdWorlocn" width="100%">
+                <viewheader>
+<!--                     <viewcolumn datatype="String" label="Location1" maxlength="30" member="WORLOCN_LOCN_CODE" required="true" visible="false" width="210px"/> -->
+                    <viewcolumn case="upper" datatype="String" label="Transcript Type" maxlength="4" member="WORLOCN_TPRT_CODE" required="true" validation="server" width="50px">
+                        <editor>
+                            <lovbox/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="Official" member="WORLOCN_OFFICIAL_IND" required="false" width="50px">
+                        <editor>
+                            <checkbox falsevalue="N" name="" othervaluestate="unchecked" unmatchedvalue="N" value="Y"/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="Printer Code" maxlength="30" member="WORLOCN_PRNT_CODE" required="true" validation="server" width="210px">
+                        <editor>
+                            <lovbox/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="User ID" maxlength="30" member="WORLOCN_USER" width="210px"/>
+                    <viewcolumn datatype="Date" label="Activity Date" maxlength="1" member="WORLOCN_ACTIVITY_DATE" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

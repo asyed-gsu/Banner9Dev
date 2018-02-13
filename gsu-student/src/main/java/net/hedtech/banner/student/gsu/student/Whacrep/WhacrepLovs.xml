@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov RecordGroup="STVSUBJ" Height="500" Width="500" Title="SUBJECT (STVSUBJ)" Name="LOV_STVSUBJ">
+        <Columns>
+            <!-- <Column ReturnItem="WHBCREP.WHBCREP_SUBJ_CODE" Width="50" Title="Code" DataMember="STVSUBJ_CODE"/> -->
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="Code" DataMember="STVSUBJ_CODE"/>
+            <Column Width="50" Title="Description" DataMember="STVSUBJ_DESC"/>
+        </Columns>
+    </Lov>
+</Lovs>

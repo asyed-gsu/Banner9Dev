@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WSROPTI.Manager.Config" name="WSROPTI">
+		<items>
+			<item name="WSROPTI_PIDM" logicalName="wsroptiPidm" type="java.math.BigDecimal" physicalName="WSROPTI_PIDM" key="true">
+				<value>
+					<item name="PIDM" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="WSROPTI_SEQ" logicalName="wsroptiSeq" type="java.math.BigDecimal" physicalName="WSROPTI_SEQ" key="true">
+			</item>
+			<item name="WSROPTI_TERM_CODE" logicalName="wsroptiTermCode" type="java.lang.String" physicalName="WSROPTI_TERM_CODE">
+				<value>
+					<item name="TERM_CODE" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="WSROPTI_FGRP_CODE" logicalName="wsroptiFgrpCode" type="java.lang.String" physicalName="WSROPTI_FGRP_CODE">
+			</item>
+			<item name="WSROPTI_LEVL_CODE" logicalName="wsroptiLevlCode" type="java.lang.String" physicalName="WSROPTI_LEVL_CODE">
+			</item>
+			<item name="WSROPTI_OPTION" logicalName="wsroptiOption" type="java.lang.String" physicalName="WSROPTI_OPTION">
+			</item>
+			<item name="WSROPTI_ACTIVITY_DATE" logicalName="wsroptiActivityDate" type="java.util.Date" physicalName="WSROPTI_ACTIVITY_DATE">
+			</item>
+			<item name="WSROPTI_USER_ID" logicalName="wsroptiUserId" type="java.lang.String" physicalName="WSROPTI_USER_ID">
+			</item>
+			<item name="FGRP_DESC" logicalName="fgrpDesc" type="String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wsaopti.model.WsroptiAdapter</adapterClass>
+		
+		<defaultWhereClause><![CDATA[WHERE wsropti_term_code = :TERM and wsropti_pidm = :PIDM]]></defaultWhereClause>
+		
+		
+		
+	</manager>
+</b:beans>

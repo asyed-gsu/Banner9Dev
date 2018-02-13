@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Lovs>
+   <Lov RecordGroup="STVLEVL_RG" Height="500" Width="400" Name="STVLEVL_LOV">
+   </Lov>    
+   <Lov RecordGroup="STVTERM_RG" Height="500" Width="400" Name="STVTERM_LOV">
+   </Lov>       
+</Lovs>

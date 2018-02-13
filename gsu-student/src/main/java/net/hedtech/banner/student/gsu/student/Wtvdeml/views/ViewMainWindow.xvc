@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window name="MAIN_WINDOW" layout="horizontal"
+	title="Distribution Email Validation Form" xmlns="urn:schemas:morphis:frames:view"
+	xmlns:xl="urn:schemas:morphis:frames:logic">
+
+	<include
+		src="net/hedtech/banner/student/gsu/student/Wtvdeml/views/PanelWtvdemlCanvas"
+		xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic"
+		xmlns:xv="urn:schemas:morphis:frames:view" />
+</window>
+
+
+	

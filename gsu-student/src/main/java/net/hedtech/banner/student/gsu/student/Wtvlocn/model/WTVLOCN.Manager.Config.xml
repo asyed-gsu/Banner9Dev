@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WTVLOCN.Manager.Config" name="WTVLOCN">
+		<items>
+			<item name="WTVLOCN_CODE" logicalName="wtvlocnCode" type="String" physicalName="WTVLOCN_CODE">
+			</item>
+			<item name="WTVLOCN_DESC" logicalName="wtvlocnDesc" type="String" physicalName="WTVLOCN_DESC">
+			</item>
+			<item name="WTVLOCN_ACTIVITY_DATE" logicalName="wtvlocnActivityDate" type="java.util.Date" physicalName="WTVLOCN_ACTIVITY_DATE">
+			</item>
+			<item name="WTVLOCN_USER_ID" logicalName="wtvlocnUserId" type="String" physicalName="WTVLOCN_USER_ID">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wtvlocn.model.WtvlocnAdapter</adapterClass>
+		
+		<defaultOrderByClause><![CDATA[wtvlocn_code]]></defaultOrderByClause>
+		
+		
+		
+		
+	</manager>
+</b:beans>

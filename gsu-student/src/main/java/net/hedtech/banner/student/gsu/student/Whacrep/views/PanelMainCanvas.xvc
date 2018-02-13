@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional"><!-- layout="positional" -->
+    <panel class="ContentCanvas" height="500px" name="MAIN_CANVAS" width="100%" menu="G$_DEFAULT_PM"><!-- this block is for the main panel-->
+        <interactionBlock name="WHBCREP"/>
+		<collapsiblepanel label="mainWindow.title" name="cpanelWhacrep" width="100%">
+         <gridview block="WHBCREP"  name="grdWhbcrep" width="100%">
+            <viewheader>
+                <viewcolumn case="upper" datatype="String" label="Subject" maxlength="4" member="WHBCREP_SUBJ_CODE" name="whbcrepSubjCode" required="true" width="50px">
+                  <editor>
+                    <lovbox name="LOV_STVSUBJ"/>
+                  </editor> 
+                </viewcolumn>
+                <viewcolumn datatype="String" label="Course" maxlength="5" member="WHBCREP_CRSE_NUMB" name="whbcrepCrseNumb" required="true" width="50px"/>
+                <viewcolumn datatype="Date" label="Activity Date" member="WHBCREP_ACTIVITY_DATE" name="whbcrepActivityDate" required="true" width="50px" enable="false" navigable="false" editable="false">
+                    <editor>
+                        <calendar name="" width="100px"/>
+                    </editor>
+                </viewcolumn>
+            </viewheader>
+        </gridview>
+ 	</collapsiblepanel>
+    </panel>
+</config>

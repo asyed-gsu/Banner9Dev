@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- base task definition -->
+	<b:import resource="classpath:/net/hedtech/general/common/forms/Base.Task.Config.xml"/>
+	<!-- task parts -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/Goqolib.TaskPart.Config.xml"/>
+	<!-- library resources -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	<!-- model definition -->
+	<b:import resource="classpath:/net/hedtech/banner/student/gsu/student/Wtvfgrp/model/WTVFGRP.Model.Config.xml"/>
+	
+	<task id="WTVFGRP.Task.Config" name="WTVFGRP">
+		<baseTaskConfiguration config="BASE.Task.Config"/>		
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.student.gsu.student.Wtvfgrp.WtvfgrpTask</taskClass>		
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/student/gsu/student/Wtvfgrp/WtvfgrpStruct.xml</taskResources>
+		
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.student.gsu.student.Wtvfgrp.services.WtvfgrpServices</services>
+			<attachedLibraries>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		
+		<!-- model -->
+		<formModelConfiguration config="WTVFGRP.Model.Config"/>
+		
+		<formController>net.hedtech.banner.student.gsu.student.Wtvfgrp.controller.WtvfgrpFormController</formController>
+		<blockControllers>
+			<block name="FORM_HEADER">net.hedtech.banner.student.gsu.student.Wtvfgrp.controller.FormHeaderController</block>
+			<block name="WTVFGRP">net.hedtech.banner.student.gsu.student.Wtvfgrp.controller.WtvfgrpController</block>
+		</blockControllers>
+	</task>
+</b:beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="vertical" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="G$_OPT_BLOCK"/>
+	<panel label="gOptWindow.title" style="lightbox" width="100%" class="ContentCanvas" id="panelGOptCanvas" name="G$_OPT_CANVAS">
+		<flowlayout orientation="vertical">
+			<textbox block="G$_OPT_BLOCK" enabled="false" height="1px" maxlength="30" member="OPT_SEL" name="optSel" style="empty" visible="false" width="1px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textbox>
+			<button action="WHEN-BUTTON-PRESSED" block="G$_OPT_BLOCK" enabled="false" member="SELECT_A_DESC" name="selectADesc" navigable="false"/>
+			<button action="WHEN-BUTTON-PRESSED" block="G$_OPT_BLOCK" enabled="false" member="SELECT_B_DESC" name="selectBDesc" navigable="false"/>
+			<button action="WHEN-BUTTON-PRESSED" block="G$_OPT_BLOCK" enabled="false" member="SELECT_C_DESC" name="selectCDesc" navigable="false"/>
+			<button action="WHEN-BUTTON-PRESSED" block="G$_OPT_BLOCK" enabled="false" member="SELECT_D_DESC" name="selectDDesc" navigable="false"/>
+			<button action="WHEN-BUTTON-PRESSED" block="G$_OPT_BLOCK" enabled="false" member="SELECT_E_DESC" name="selectEDesc" navigable="false"/>
+			<button action="WHEN-BUTTON-PRESSED" block="G$_OPT_BLOCK" enabled="false" member="SELECT_F_DESC" name="selectFDesc" navigable="false"/>
+		</flowlayout>
+	</panel>
+	<panel style="alert-footer">
+		<flowlayout orientation="horizontal">
+			<button action="WHEN-BUTTON-PRESSED" block="G$_OPT_BLOCK" enabled="false" label="gOptBlock.optCancelBtn.label" member="OPT_CANCEL_BTN" name="optCancelBtn" navigable="false"/>
+		</flowlayout>
+	</panel>
+</config>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Wtvsrvy/WtvsrvyAlerts.xml" LovDataPath="/net/hedtech/banner/student/gsu/student/Wtvsrvy/WtvsrvyLovs.xml" Name="WTVSRVY">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/student/gsu/student/Wtvsrvy/views/ViewMainWindow">
+            <ContentCanvas Id="WTVSRVY_CANVAS"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="WTVSRVY" MultiRecord="true">
+            <Item AllowUpdate="false" AutoSkip="true" CanvasName="WTVSRVY_CANVAS" Id="WTVSRVY_CODE" Type="TextItem"/>
+            <Item AutoSkip="true" CanvasName="WTVSRVY_CANVAS" Id="WTVSRVY_DESC" Type="TextItem"/>
+            <Item AllowUpdate="false" AutoSkip="false" CanvasName="WTVSRVY_CANVAS" Id="WTVSRVY_TYPE" Type="TextItem" Enabled="false" />
+            <Item AllowUpdate="false" CanvasName="WTVSRVY_CANVAS" Id="WTVSRVY_ACTIVITY_DATE" Type="TextItem" Enabled="false"/>
+        </Block>
+ </Logic>
+</FormStructure>

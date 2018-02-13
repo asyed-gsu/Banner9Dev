@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="WTVLOCN_RG.ValueSet.Config" name="WTVLOCN_RG">
+		<columns>
+			<column name="WTVLOCN_CODE" type="String" size="15"/>
+			<column name="WTVLOCN_DESC" type="String" size="30"/>
+		</columns>
+		<query><![CDATA[select wtvlocn_code, wtvlocn_desc
+from wtvlocn
+order by wtvlocn_code
+		
+		]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+	<valueSet id="STVTPRT_RG.ValueSet.Config" name="STVTPRT_RG">
+		<columns>
+			<column name="STVTPRT_CODE" type="String" size="15"/>
+			<column name="STVTPRT_DESC" type="String" size="30"/>
+		</columns>
+		<query><![CDATA[select stvtprt_code, stvtprt_desc
+from stvtprt
+order by stvtprt_code
+		]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+	<valueSet id="GTVPRNT.ValueSet.Config" name="GTVPRNT_RG">
+		<columns>
+			<column name="GTVPRNT_CODE" type="String" size="0"/>
+			<column name="GTVPRNT_DESC" type="String" size="0"/>
+			<column name="GTVPRNT_PRINTER_COMMAND" type="String" size="0"/>
+			<column name="GTVPRNT_ACTIVITY_DATE" type="Date" size="0"/>			
+		</columns>
+		<query><![CDATA[select gtvprnt_code, gtvprnt_desc, gtvprnt_printer_command, gtvprnt_activity_date
+from gtvprnt
+order by gtvprnt_code]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+</b:beans>

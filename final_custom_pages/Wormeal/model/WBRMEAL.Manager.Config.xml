@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WBRMEAL.Manager.Config" name="WBRMEAL">
+		<items>
+			<item name="WBRMEAL_ID" logicalName="wbrmealId" type="java.lang.String"  virtual="true" >
+			</item>
+			<item name="WBRMEAL_NAME" logicalName="wbrmealName" type="java.lang.String" virtual="true">
+			</item>
+			<item name="WBRMEAL_PIDM" logicalName="wbrmealPidm" type="java.math.BigDecimal" physicalName="WBRMEAL_PIDM" key="true">
+			</item>
+			<item name="WBRMEAL_TERM" logicalName="wbrmealTerm" type="java.lang.String" physicalName="WBRMEAL_TERM" key="true">
+				<value>
+					<item name="TERM" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="WBRMEAL_ISO" logicalName="wbrmealIso" type="java.lang.String" physicalName="WBRMEAL_ISO">
+			</item>
+			<item name="WBRMEAL_MEALPLAN_ID" logicalName="wbrmealMealplanId" type="java.math.BigDecimal" physicalName="WBRMEAL_MEALPLAN_ID">
+			</item>
+			<item name="WBRMEAL_MEALPLAN_AMT" logicalName="wbrmealMealplanAmt" type="java.math.BigDecimal" physicalName="WBRMEAL_MEALPLAN_AMT">
+			</item>
+			<item name="WBRMEAL_DROP_IND" logicalName="wbrmealDropInd" type="java.lang.String" physicalName="WBRMEAL_DROP_IND">
+			</item>
+			<item name="WBRMEAL_ENTRY_DATE" logicalName="wbrmealEntryDate" type="java.util.Date" physicalName="WBRMEAL_ENTRY_DATE">
+			</item>
+			<item name="WBRMEAL_POST_DATE" logicalName="wbrmealPostDate" type="java.util.Date" physicalName="WBRMEAL_POST_DATE">
+			</item>
+			<item name="WBRMEAL_ACDM_YR_IND" logicalName="wbrmealAcdmYrInd" type="java.lang.String" physicalName="WBRMEAL_ACDM_YR_IND">
+			</item>
+			<item name="WBRMEAL_ACTIVITY_DATE" logicalName="wbrmealActivityDate" type="java.util.Date" physicalName="WBRMEAL_ACTIVITY_DATE">
+			</item>
+			<item name="WBRMEAL_USER" logicalName="wbrmealUser" type="java.lang.String" physicalName="WBRMEAL_USER">
+			</item>
+			<item name="WBRMEAL_COMMENTS" logicalName="wbrmealComments" type="java.lang.String" physicalName="WBRMEAL_COMMENTS">
+			</item>
+			<item name="WBRMEAL_MEALPLAN_DESC" logicalName="wbrmealMealPlanDesc" type="String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wormeal.model.WbrmealAdapter</adapterClass>		
+		<defaultWhereClause><![CDATA[WHERE WBRMEAL_TERM = :TERM]]></defaultWhereClause>
+		<defaultOrderByClause><![CDATA[(select spriden_last_name from spriden where spriden_pidm = wbrmeal_pidm and spriden_change_ind is null)]]></defaultOrderByClause>
+		
+	</manager>
+</b:beans>

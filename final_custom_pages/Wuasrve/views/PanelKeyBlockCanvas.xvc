@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="KEY_BLOCK"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" name="KEY_BLOCK_CANVAS" style="keyblock" width="100%">
+		<gridflowlayout cols="2" orientation="horizontal" style="ui-layout-responsive">
+			<component>
+				<textbox name="srvyCode" case="upper" width="80px" height="22px" label="Survey" maxlength="6" block="KEY_BLOCK" member="SRVY_CODE" datatype="String">
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="22px" icon="search" member="SRVY_CODE_LBT" name="srvyCodeLbt" navigable="false" style="ui-buttoninput" tooltip="search" width="20px">
+                    <xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+                </button>				
+			</component>
+			<component>
+				<textbox name="TermCode" width="60px" height="22px" label="Term Code" maxlength="6" block="KEY_BLOCK" member="TERM_CODE" datatype="String">
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="22px" icon="search" member="TERM_CODE_LBT" name="termCodeLbt" navigable="false" style="ui-buttoninput" tooltip="search" width="20px">
+                    <xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+                </button>												
+			</component>
+		</gridflowlayout>
+	</panel>
+	<panel style="keyblock-button-container">
+		<button accesskey="ALT+PAGE_DOWN" action="NEXT_BLOCK" block="KEY_BLOCK" label="keyBlock.executeBtn.label" member="EXECUTE_BTN" tooltip="keyBlock.executeBtn.tooltip"/>
+		<button accesskey="F5" action="CLEAR-FORM" block="KEY_BLOCK" label="keyBlock.keyClrfrmBtn.label" member="KEY-CLRFRM_BTN" tooltip="keyBlock.keyClrfrmBtn.tooltip" visible="false"/>
+	</panel>
+</config>

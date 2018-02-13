@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <panel class="ContentCanvas" height="100%" name="WTVDEML_CANVAS" width="100%">
+        <interactionBlock name="WTVDEML"/>
+        <collapsiblepanel label="wtvdeml.collapsible.panel.label" name="cpanelWtvdeml" width="100%">
+            <gridview block="WTVDEML" name="grdWtvdeml" width="100%">
+                <viewheader>
+                    <viewcolumn datatype="String" label="wtvdeml.dist.email" maxlength="100" member="WTVDEML_CODE" required="true" width="300px"/>
+                    <viewcolumn datatype="String" label="wtvdeml.desc" maxlength="100" member="WTVDEML_DESC" required="true" width="300px"/>
+                    <viewcolumn datatype="String" label="wtvdeml.coll" maxlength="2" member="WTVDEML_COLL_CODE" width="50px">
+                   		<editor>
+                    		<lovbox name="LOV_STVCOLL"/>
+                  		</editor> 
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="wtvdeml.dept.code" maxlength="4" member="WTVDEML_DEPT_CODE" width="50px">
+                    	<editor>
+                    		<lovbox name="LOV_STVDEPT"/>
+                  		</editor> 
+                    </viewcolumn>
+                    <viewcolumn datatype="Date" label="wtvdeml.activity.date" member="WTVDEML_ACTIVITY_DATE" required="true" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

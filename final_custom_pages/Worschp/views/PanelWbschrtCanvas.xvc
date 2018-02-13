@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel class="StackedCanvas" id="WBSCHRT_CANVAS" menu="G$_DEFAULT_PM" name="WBSCHRT_CANVAS" width="100%">
+    <interactionBlock name="WBSCHRT"/>
+        <collapsiblepanel label="Scholarship Assignment Form" name="cpanelWbschrt" width="100%">
+            <gridview block="WBSCHRT" name="grdWbschrt" width="100%">
+                <viewheader>
+              <viewcolumn datatype="String" label="Spriden_ID" member="SPRIDEN_ID" width="50px"/>
+                    <viewcolumn datatype="String" label="Student Name" member="STUDENT_NAME" width="50px"/>
+                    <viewcolumn datatype="Date" label="Assign_Date" member="WBSCHRT_ASSIGN_DATE" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+             		<viewcolumn datatype="Date" label="Accept Date" member="ACCEPT_DATE" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="Active" member="WBSCHRT_VALID" width="50px"/> 
+                    <viewcolumn datatype="String" label="Notes" maxlength="1000" member="WBSCHRT_NOTES" required="true" width="500px"/>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

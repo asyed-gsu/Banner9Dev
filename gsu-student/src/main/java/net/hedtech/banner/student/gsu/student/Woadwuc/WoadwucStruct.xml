@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Woadwuc/WoadwucAlerts.xml" LovDataPath="/net/hedtech/banner/student/gsu/student/Woadwuc/WoadwucLovs.xml" Name="WOADWUC">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/student/gsu/student/Woadwuc/views/ViewMainWindow">
+        <ContentCanvas Id="WORDWUC_CANVAS" />
+        </Window>
+         <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/student/gsu/student/Woadwuc/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window> 
+    </Visual>
+    <Logic>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+         <Block Id="WORDWUC" MultiRecord="true">
+      <Item AllowUpdate="false" CanvasName="WORDWUC_CANVAS" DataType="String" Enabled="true" Id="ID" MaxLength="9" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="WORDWUC_CANVAS" DataType="String" Enabled="false" Id="NAME" MaxLength="230" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="WORDWUC_CANVAS" DataType="String" Enabled="true"  Id="WORDWUC_USER_CLASS" Lov="ALL_USERCLASS_LOV" MaxLength="30" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="WORDWUC_CANVAS" Id="WORDWUC_USER" Type="TextItem" Enabled="false"/>
+      <Item AllowUpdate="false" CanvasName="WORDWUC_CANVAS" Id="WORDWUC_ACTIVITY_DATE" Type="TextItem" Enabled="false"/>
+      <Item DataType="Number" Enabled="true" Id="WORDWUC_PIDM" MaxLength="10" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" DataType="String" Enabled="false" Id="CONFID_INFO" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" DataType="String" Enabled="false" Id="DECEASED_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="WORDWUC_CANVAS" Id="ID_LBT" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_SEL" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+    </Logic>
+</FormStructure>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov RecordGroup="RG_STVCOLL" Height="500" Width="400" Title="Stvcoll" Name="LOV_STVCOLL">
+        <Columns>
+            <Column  ReturnItem="GLOBAL.VALUE" Width="50" Title="Code" DataMember="STVCOLL_CODE"/>
+            <Column Width="70" Title="Description" DataMember="STVCOLL_DESC"/>
+            <Column Width="50" Title="Activity Date" DataMember="STVCOLL_ACTIVITY_DATE"/>
+            <Column Width="50" Title="Sys Req" DataMember="STVCOLL_SYSTEM_REQ_IND"/>
+            <Column Width="50" Title="VR Msg" DataMember="STVCOLL_VR_MSG_NO"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="RG_STVDEPT" Height="500" Width="400" Title="Stvdept" Name="LOV_STVDEPT">
+        <Columns>
+            <Column  ReturnItem="GLOBAL.VALUE" Width="50" Title="Code" DataMember="STVDEPT_CODE"/>
+            <Column Width="50" Title="Description" DataMember="STVDEPT_DESC"/>
+            <Column Width="50" Title="Activity Date" DataMember="STVDEPT_ACTIVITY_DATE"/>
+            <Column Width="50" Title="Sys Req" DataMember="STVDEPT_SYSTEM_REQ_IND"/>
+            <Column Width="50" Title="VR Msg" DataMember="STVDEPT_VR_MSG_NO"/>
+        </Columns>
+    </Lov>
+</Lovs>

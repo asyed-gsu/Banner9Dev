@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Worsfrm/WorsfrmAlerts.xml" LovDataPath="/net/hedtech/banner/student/gsu/student/Worsfrm/WorsfrmLovs.xml" Name="WORSFRM">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/student/gsu/student/Worsfrm/views/ViewMainWindow">
+            <StackedCanvas Id="WBSCFRM_1_CANVAS"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="WBSCFRM" MultiRecord="true">
+           	<Item AutoSkip="true" CanvasName="WBSCFRM_1_CANVAS" Id="WBSCFRM_SCHP_CODE" Type="TextItem"/>
+            <Item  AutoSkip="true" CanvasName="WBSCFRM_1_CANVAS" Id="WBSCFRM_SCHF_CODE" Type="TextItem"/>
+            <Item AutoSkip="true" CanvasName="WBSCFRM_1_CANVAS" Id="WBSCFRM_START_TERM" Type="TextItem"/>
+            <Item CanvasName="WBSCFRM_1_CANVAS" Id="WBSCFRM_END_TERM" Type="TextItem"/>
+            <Item CanvasName="WBSCFRM_1_CANVAS" Id="WBSCFRM_ASSIGN_DATE" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="WBSCFRM_1_CANVAS" Id="WBSCFRM_ACTIVITY_DATE" Type="TextItem" Enabled="false"/>
+        </Block>
+    </Logic>
+</FormStructure>

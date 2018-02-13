@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="RG_STVCOLL.ValueSet.Config" name="RG_STVCOLL">
+		<columns>
+			<column name="STVCOLL_CODE" type="String" size="2"/>
+			<column name="STVCOLL_DESC" type="String" size="30"/>
+			<column name="STVCOLL_ACTIVITY_DATE" type="Date" size="0"/>
+			<column name="STVCOLL_SYSTEM_REQ_IND" type="String" size="1"/>
+			<column name="STVCOLL_VR_MSG_NO" type="Number" size="6"/>
+		</columns>
+		<query><![CDATA[SELECT STVCOLL_CODE, STVCOLL_DESC, STVCOLL_ACTIVITY_DATE, STVCOLL_SYSTEM_REQ_IND, STVCOLL_VR_MSG_NO FROM SATURN.STVCOLL ORDER BY STVCOLL_CODE]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+	<valueSet id="RG_STVDEPT.ValueSet.Config" name="RG_STVDEPT">
+		<columns>
+			<column name="STVDEPT_CODE" type="String" size="4"/>
+			<column name="STVDEPT_DESC" type="String" size="30"/>
+			<column name="STVDEPT_ACTIVITY_DATE" type="Date" size="0"/>
+			<column name="STVDEPT_SYSTEM_REQ_IND" type="String" size="1"/>
+			<column name="STVDEPT_VR_MSG_NO" type="Number" size="6"/>
+		</columns>
+		<query><![CDATA[SELECT STVDEPT_CODE, STVDEPT_DESC, STVDEPT_ACTIVITY_DATE, STVDEPT_SYSTEM_REQ_IND, STVDEPT_VR_MSG_NO FROM SATURN.STVDEPT ORDER BY STVDEPT_CODE]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+</b:beans>

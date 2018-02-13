@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <panel class="ContentCanvas" height="500px" menu="G$_DEFAULT_PM" name="WTRTRHL_CANVAS" width="100%">
+        <interactionBlock name="WTRTRHL"/>
+        <collapsiblepanel label="mainWindow.title" name="cpanelWtrtrhl" width="100%">
+            <gridview block="WTRTRHL" name="grdWtrtrhl" width="100%">
+                <viewheader>
+                    <viewcolumn case="upper" datatype="String" label="Trtg Code" maxlength="50" member="WTRTRHL_TRTG_CODE" required="true" validation="server" width="150px">
+                        <editor>
+                            <lovbox/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="Trtg Value" maxlength="50" member="WTRTRHL_TRTG_VALUE" required="true" width="250px"/>
+                    <viewcolumn case="upper" datatype="String" label="Hold Grde Ind" maxlength="1" member="WTRTRHL_HOLD_GRDE_IND" required="true" width="70px"/>
+                    <viewcolumn case="upper" datatype="String" label="Hold Degr Ind" maxlength="1" member="WTRTRHL_HOLD_DEGR_IND" required="true" width="70px"/>
+                    <viewcolumn datatype="String" editable="false" label="Create User" maxlength="30" member="WTRTRHL_CREATE_USER" required="true" width="110px"/>
+                    <viewcolumn datatype="Date" editable="false" label="Create Date" member="WTRTRHL_CREATE_DATE" required="true" width="70px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" editable="false" label="User" maxlength="30" member="WTRTRHL_USER" required="true" width="110px"/>
+                    <viewcolumn datatype="Date" editable="false" label="Activity Date" member="WTRTRHL_ACTIVITY_DATE" required="true" width="70px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" title="gOptWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel name="gOptWindow" width="100%">
+		<include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGOptCanvas"/>
+	</formpanel>
+</config>

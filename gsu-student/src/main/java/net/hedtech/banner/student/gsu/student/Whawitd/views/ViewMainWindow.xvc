@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window name="MAIN_WINDOW" layout="horizontal" title="Student Withdrawal History" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<include src="net/hedtech/banner/student/gsu/student/Whawitd/views/PanelKeyBlockCanvas" />
+	<tabpanel style="ui-panel-view-container ui-notabs" width="100%">
+		<tab label="main">
+			<include src="net/hedtech/banner/student/gsu/student/Whawitd/views/PanelMainCanvas" />
+			<include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGWelcomeCanvas" />
+		</tab>
+	</tabpanel>
+</window>

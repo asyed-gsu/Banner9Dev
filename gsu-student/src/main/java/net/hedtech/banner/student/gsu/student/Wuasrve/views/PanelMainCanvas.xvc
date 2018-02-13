@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <panel class="StackedCanvas" id="MAIN_CANVAS" menu="G$_DEFAULT_PM" name="MAIN_CANVAS" width="100%">
+        <interactionBlock name="WURSRVE"/>
+        <collapsiblepanel label="Distribution Exceptions" name="cpanelWursrve" width="100%">
+            <gridview block="WURSRVE" name="grdWursrve" width="100%">
+                <viewheader>
+                    <!-- 					<viewcolumn label="Wursrve Srvy Id" width="50px" textalign="right" required="true" maxlength="1" member="WURSRVE_SRVY_ID" datatype="Number">
+					</viewcolumn>
+					<viewcolumn label="Wursrve Srvy Term Code" width="50px" required="true" maxlength="6" member="WURSRVE_SRVY_TERM_CODE" datatype="String">
+					</viewcolumn> -->
+                    <viewcolumn datatype="String" label="Crn" maxlength="5" member="WURSRVE_CRN" required="true" width="50px">
+                        <xl:event action="wursrve_crn_postChange" name="postChange"/>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="P/T" maxlength="5" member="PTRM_CODE" width="50px"/>
+                    <viewcolumn datatype="String" label="Subj" maxlength="5" member="SUBJ_CODE" width="50px"/>
+                    <viewcolumn datatype="String" label="Crse" maxlength="5" member="CRSE_NUMB" width="50px"/>
+                    <viewcolumn datatype="String" label="Distribution" maxlength="1" member="WURSRVE_EXCEPT_IND" required="true" case="upper" width="50px"/>
+                    <viewcolumn datatype="Date" label="Activity Date" maxlength="1" member="WURSRVE_ACTIVITY_DATE" editable="false" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+        <collapsiblepanel label="Part of Term Exceptions" name="cpanelWursrvx" width="100%">
+            <gridview block="WURSRVX" name="grdWursrvx" width="100%">
+                <viewheader>
+                    <!-- 				<viewcolumn label="Wursrve Srvy Id" width="50px" textalign="right" required="true" maxlength="1" member="WURSRVE_SRVY_ID" datatype="Number">
+					</viewcolumn>
+					<viewcolumn label="Wursrve Srvy Term Code" width="50px" required="true" maxlength="6" member="WURSRVE_SRVY_TERM_CODE" datatype="String">
+					</viewcolumn> -->
+                    <viewcolumn datatype="String" label="Crn" maxlength="5" member="WURSRVX_CRN" required="true" width="50px"/>
+                    <viewcolumn datatype="String" label="P/T" maxlength="5" member="PTRM_CODE" width="50px"/>
+                    <viewcolumn datatype="String" label="Subj" maxlength="5" member="SUBJ_CODE" width="50px"/>
+                    <viewcolumn datatype="String" label="Crse" maxlength="5" member="CRSE_NUMB" width="50px"/>
+                    <viewcolumn datatype="String" label="Group" maxlength="1" member="WURSRVX_GROUP_CODE" required="true" width="50px"/>
+                    <viewcolumn datatype="Date" label="Activity Date" maxlength="1" member="WURSRVX_ACTIVITY_DATE" required="true" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

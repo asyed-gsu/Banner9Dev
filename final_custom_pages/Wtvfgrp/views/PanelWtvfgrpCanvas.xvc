@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <panel class="ContentCanvas" height="500px" name="WTVFGRP_CANVAS" menu="G$_DEFAULT_PM" width="100%">
+        <interactionBlock name="WTVFGRP"/>
+        <collapsiblepanel label="mainWindow.title" name="cpanelWtvfgrp" width="100%">
+            <gridview block="WTVFGRP" name="grdWtvfgrp" width="100%">
+                <viewheader>
+                    <viewcolumn case="upper" datatype="String" label="Code" maxlength="4" member="WTVFGRP_CODE" required="true" width="50px"/>
+                    <viewcolumn datatype="String" label="Description" maxlength="120" member="WTVFGRP_DESC" required="true" width="500px"/>                    
+                    <viewcolumn case="upper" datatype="String" label="Levl" maxlength="2" member="WTVFGRP_LEVL_CODE" required="true" validateFromList="true" width="50px">
+                        <editor>
+                            <lovbox/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="Date" editable="false" label="Activity Date" member="WTVFGRP_ACTIVITY_DATE" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" editable="false" label="User" maxlength="30" member="WTVFGRP_USER_ID" width="210px"/>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

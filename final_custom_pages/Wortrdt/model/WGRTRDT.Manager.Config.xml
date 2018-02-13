@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WGRTRDT.Manager.Config" name="WGRTRDT">
+		<items>
+			<item name="WGRTRDT_TERM_CODE" logicalName="wgrtrdtTermCode" type="java.lang.String" physicalName="WGRTRDT_TERM_CODE">
+				<value>
+					<item name="STVTERM_CODE" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="WGRTRDT_TRME_CODE" logicalName="wgrtrdtTrmeCode" type="java.lang.String" physicalName="WGRTRDT_TRME_CODE">
+			</item>
+			<item name="WTVTRME_DESCRIPTION" logicalName="wtvtrmeDescription" type="String" virtual="true">
+			</item>
+			<item name="WGRTRDT_PTRM_CODE" logicalName="wgrtrdtPtrmCode" type="java.lang.String" physicalName="WGRTRDT_PTRM_CODE">
+			</item>
+			<item name="STVPTRM_DESCRIPTION" logicalName="stvptrmDescription" type="String" virtual="true">
+			</item>
+			<item name="WGRTRDT_BEGIN_DATE" logicalName="wgrtrdtBeginDate" type="java.util.Date" physicalName="WGRTRDT_BEGIN_DATE">
+			</item>
+			<item name="WGRTRDT_END_DATE" logicalName="wgrtrdtEndDate" type="java.util.Date" physicalName="WGRTRDT_END_DATE">
+			</item>
+			<item name="WGRTRDT_USER" logicalName="wgrtrdtUser" type="java.lang.String" physicalName="WGRTRDT_USER">
+			</item>
+			<item name="WGRTRDT_ACTIVITY_DATE" logicalName="wgrtrdtActivityDate" type="java.util.Date" physicalName="WGRTRDT_ACTIVITY_DATE">
+			</item>
+			<item name="UPDATE_IND" logicalName="updateInd" type="String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wortrdt.model.WgrtrdtAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE WGRTRDT_TERM_CODE = :STVTERM_CODE]]></defaultWhereClause>
+		
+		
+		
+		
+	</manager>
+</b:beans>

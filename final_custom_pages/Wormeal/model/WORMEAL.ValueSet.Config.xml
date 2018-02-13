@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="WTRMEAL.ValueSet.Config" name="WTRMEAL">
+		<columns>
+			<column name="WTRMEAL_ID" type="Number" size="8"/>
+			<column name="WTRMEAL_TYPE" type="String" size="6"/>
+			<column name="WTRMEAL_TOT_PRICE" type="Number" size="12"/>
+		</columns>
+		<query><![CDATA[SELECT WTRMEAL_ID, WTRMEAL_TYPE, WTRMEAL_TOT_PRICE
+  FROM WTRMEAL
+  ORDER BY WTRMEAL_TYPE ASC]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+	<valueSet id="STVTERM.ValueSet.Config" name="STVTERM">
+		<columns>
+			<column name="STVTERM_CODE" type="String" size="6"/>
+			<column name="STVTERM_DESC" type="String" size="30"/>
+		</columns>
+		<query><![CDATA[SELECT STVTERM_CODE, STVTERM_DESC
+  FROM STVTERM
+  ORDER BY STVTERM_CODE DESC]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+</b:beans>

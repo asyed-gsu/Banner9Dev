@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WTVSCHP.Manager.Config" name="WTVSCHP">
+		<items>
+			<item name="WTVSCHP_CODE" logicalName="wtvschpCode" type="java.lang.String" physicalName="WTVSCHP_CODE" key="true">
+			</item>
+			<item name="WTVSCHP_DESC" logicalName="wtvschpDesc" type="java.lang.String" physicalName="WTVSCHP_DESC">
+			</item>
+			<item name="WTVSCHP_TYPE" logicalName="wtvschpType" type="java.lang.String" physicalName="WTVSCHP_TYPE">
+			</item>
+			<item name="WTVSCHP_AMT" logicalName="wtvschpAmt" type="java.math.BigDecimal" physicalName="WTVSCHP_AMT">
+			</item>
+			<item name="WTVSCHP_YEARS" logicalName="wtvschpYears" type="java.math.BigDecimal" physicalName="WTVSCHP_YEARS">
+			</item>
+			<item name="WTVSCHP_PRJCT_ID" logicalName="wtvschpPrjctId" type="java.lang.String" physicalName="WTVSCHP_PRJCT_ID">
+			</item>
+			<item name="WTVSCHP_SCHP_ID" logicalName="wtvschpSchpId" type="java.math.BigDecimal" physicalName="WTVSCHP_SCHP_ID">
+			</item>
+			<item name="WTVSCHP_ACTIVITY_DATE" logicalName="wtvschpActivityDate" type="java.util.Date" physicalName="WTVSCHP_ACTIVITY_DATE">
+			</item>
+			<item name="WTVSCHP_GPA_REQ" logicalName="wtvschpGpaReq" type="java.lang.String" physicalName="WTVSCHP_GPA_REQ">
+			</item>
+			<item name="WTVSCHP_DISP_RULE" logicalName="wtvschpDispRule" type="String" physicalName="WTVSCHP_DISP_RULE">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wtvschp.model.WtvschpAdapter</adapterClass>
+		
+		<defaultOrderByClause><![CDATA[wtvschp_code]]></defaultOrderByClause>
+		
+		
+		
+	</manager>
+</b:beans>
