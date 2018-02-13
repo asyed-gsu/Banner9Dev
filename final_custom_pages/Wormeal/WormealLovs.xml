@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov RecordGroup="STVTERM" Height="500" Width="500" Title="Terms (STVTERM)" Name="LOV_STVTERM">
+        <Columns>
+            <Column ReturnItem="KEY_BLOCK.TERM" Width="50" Title="Code" DataMember="STVTERM_CODE"/>
+            <Column ReturnItem="KEY_BLOCK.TERM_DESC" Width="50" Title="Desc" DataMember="STVTERM_DESC"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="WTRMEAL" Height="500" Width="500" Title="Meal Plans (WTRMEAL)" Name="WTRMEAL_LOV">
+        <Columns>
+            <Column ReturnItem="WBRMEAL.WBRMEAL_MEALPLAN_DESC" Width="50" Title="Type" DataMember="WTRMEAL_TYPE"/>
+            <Column ReturnItem="WBRMEAL.WBRMEAL_MEALPLAN_ID" Width="50" Title="ID" DataMember="WTRMEAL_ID"/>
+            <Column ReturnItem="WBRMEAL.WBRMEAL_MEALPLAN_AMT" Visible="false" Width="50" Title="Total Price" DataMember="WTRMEAL_TOT_PRICE"/>
+        </Columns>
+    </Lov>
+</Lovs>

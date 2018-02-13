@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Worschp/WorschpAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/student/gsu/student/Worschp/WorschpLovs.xml" Name="WORSCHP">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Title="Placement Test Dates Form WORSCHP" Url="net/hedtech/banner/student/gsu/student/Worschp/views/ViewMainWindow">
+            <StackedCanvas Id="WBSCHRT_CANVAS"/>
+            <ContentCanvas Id="KEY_BLOCK_CANVAS"/>
+            <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="BUTTON_CONTROL_BLOCK">
+            <Item DataType="String" Id="CHECK_KEYS" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="TERM_CODE_LBT" MaxLength="13" Navigable="false" Type="Button"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="SCHP_CODE_LBT" MaxLength="13" Navigable="false" Type="Button"/>
+        </Block>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="KEY_BLOCK">
+            <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Enabled="true" Id="TERM_CODE" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="SCHP_CODE" Enabled="true" Lov="SCHP_CODE_LOV" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" Type="Button"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" Type="Button" Visible="false"/>
+        </Block>
+        <Block Id="WBSCHRT" MultiRecord="true" AllowInsert="false" AllowDelete="false">
+            <Item Id="WBSCHRT_PIDM" Required="false" Type="TextItem" Enabled="true" DataType="String" MaxLength="30"/>
+            <Item Id="WBSCHRT_SCHP_CODE" Required="false" Type="TextItem" Enabled="true" DataType="String" MaxLength="30"/>
+            <Item Id="WBSCHRT_TERM_CODE_EFF" Required="false" Type="TextItem" Enabled="true" DataType="String"/>
+          	<Item AllowInsert="false" AllowUpdate="false" CanvasName="WBSCHRT_CANVAS" Id="SPRIDEN_ID" Required="false" Type="TextItem" Enabled="true" NextNavigation="STUDENT_NAME" DataType="String" MaxLength="30"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="WBSCHRT_CANVAS"  Id="STUDENT_NAME" DataType="String" Type="TextItem" Enabled="true" MaxLength="130" PreviousNavigation="SPRIDEN_ID" NextNavigation="STUDENT_NAME"/> 
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="WBSCHRT_CANVAS" Id="WBSCHRT_ASSIGN_DATE" Required="true" Type="TextItem" MaxLength="11" DataType="Date" Enabled="true" PreviousNavigation="STUDENT_NAME" NextNavigation="ACCEPT_DATE"/>
+  			<Item AllowInsert="false" AllowUpdate="false" CanvasName="WBSCHRT_CANVAS" Required="false" Id="ACCEPT_DATE" Type="TextItem" Enabled="true" PreviousNavigation="WBSCHRT_ASSIGN_DATE" NextNavigation="SCHP_ACTIVE" DataType="Date"/>
+            <Item AllowInsert="false" CanvasName="WBSCHRT_CANVAS" Required="false" Id="WBSCHRT_VALID" Type="TextItem" Enabled="true" PreviousNavigation="ACCEPT_DATE" NextNavigation="WBSCHRT_NOTES" DataType="String"/>  
+            <Item AllowInsert="false" CanvasName="WBSCHRT_CANVAS" Id="WBSCHRT_NOTES" Type="TextItem" Enabled="true" DataType="String" MaxLength="1000" Required="false"/>
+			</Block>
+    </Logic>
+</FormStructure>

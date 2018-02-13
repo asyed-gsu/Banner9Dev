@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Wtrtrtt/WtrtrttAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/student/gsu/student/Wtrtrtt/WtrtrttLovs.xml" Name="WTRTRTT">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Title="Transcript Type Rules Form WTRTRTT" Url="net/hedtech/banner/student/gsu/student/Wtrtrtt/views/ViewMainWindow">
+                        
+            <StackedCanvas Id="MAIN_CANVAS"/>
+            <ContentCanvas Id="KEY_BLOCK_CANVAS"/>
+            <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="BUTTON_CONTROL_BLOCK">
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEYBLOCK_LABL_CODE_LBT" MaxLength="13" Navigable="false" Type="Button"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEYBLOCK_TPRT_CODE_LBT" MaxLength="13" Navigable="false" Type="Button"/>
+            <Item DataType="String" Id="CHECK_KEYS" Type="TextItem"/>
+        </Block>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="KEY_BLOCK">
+            <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Id="KEYBLOCK_LABL_CODE" Lov="LABL_CODE_LOV" MaxLength="30" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Id="KEYBLOCK_TPRT_CODE" Lov="STVTPRT_LOV" MaxLength="30" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" Type="Button"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" Type="Button" Visible="false"/>
+            </Block>
+        <Block Id="WTRTRTT" MultiRecord="true">
+            <Item CanvasName="MAIN_CANVAS" Id="WTRTRTT_LABL_CODE"  Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="WTRTRTT_TPRT_CODE" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="WTRTRTT_TRTG_CODE" Lov="STVTRTG_LOV" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="WTRTRTT_TRTG_VALUE"   Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="WTRTRTT_REQ_IND" Required="true" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Enabled="false" Id="WTRTRTT_CREATE_USER" Navigable="false" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Enabled="false" Id="WTRTRTT_CREATE_DATE" Navigable="false" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Enabled="false" Id="WTRTRTT_USER" Navigable="false" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Enabled="false" Id="WTRTRTT_ACTIVITY_DATE" Navigable="false" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="MAIN_CANVAS" Enabled="false" Id="WTRTRTT_DATA_ORIGIN" Navigable="false" Type="TextItem"/>
+        </Block>
+    </Logic>
+</FormStructure>

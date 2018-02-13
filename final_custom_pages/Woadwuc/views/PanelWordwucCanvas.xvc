@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="WORDWUC"/>
+	<panel class="ContentCanvas" id="pnlWordwucCanvas" menu="G$_DEFAULT_PM" name="WORDWUC_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="DegreeWorks - User Class WOADWUC">
+				<gridview block="WORDWUC" name="grdWordwuc" width="100%">
+					<viewheader>
+						<viewcolumn autoskip="true" block="WORDWUC" case="upper" datatype="String" keyactions="NEXT_ITEM" label="ID" labelstyle="DEFAULT" maxlength="9" member="ID" name="id" validation="server" width="106px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox action="WHEN-BUTTON-PRESSED"/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="WORDWUC" datatype="String" enabled="false" keyactions="NEXT_ITEM" label="Name" labelstyle="DEFAULT" maxlength="230" member="NAME" name="nname" width="479px"/>
+						<viewcolumn block="WORDWUC" case="upper" datatype="String" label="User Class" labelstyle="DEFAULT" maxlength="30" member="WORDWUC_USER_CLASS" name="wordwucUserclass" required="true" validation="server" width="266px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn label="User" width="50px" required="true" maxlength="30" member="WORDWUC_USER" datatype="String">
+					</viewcolumn>
+					<viewcolumn label="Activity Date" width="70px" required="true" member="WORDWUC_ACTIVITY_DATE" datatype="Date" formatmask="DD-MON-YYYY" case="upper">
+						<editor>
+							<calendar    />
+						</editor>
+					</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</accordion>
+	</panel>
+</config>

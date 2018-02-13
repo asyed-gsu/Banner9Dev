@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Wtvooct/WtvooctAlerts.xml" LovDataPath="/net/hedtech/banner/student/gsu/student/Wtvooct/WtvooctLovs.xml" Name="WTVOOCT">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Title="wtvooct able" Url="net/hedtech/banner/student/gsu/student/Wtvooct/views/ViewMainWindow">
+            <ContentCanvas Id="WTVOOCT_CANVAS"/>
+        </Window>
+        <Window Id="G$_SDSP_WINDOW" Modal="true" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewGSdspWindow">
+            <ContentCanvas Id="G$_SDSP_CANVAS"/>
+        </Window>
+        <Window Id="G$_VPDI_WINDOW" Modal="true" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewGVpdiWindow">
+            <ContentCanvas Id="G$_VPDI_CANVAS"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="G$_SDKEY">
+            <Item Enabled="false" Id="SD_BLOCK" MaxLength="30" Navigable="false" Type="TextItem"/>
+            <Item Enabled="false" Id="SD_DISPBLOCK" MaxLength="30" Navigable="false" Type="TextItem"/>
+            <Item Enabled="false" Id="SD_BANTAB" MaxLength="512" Navigable="false" Type="TextItem"/>
+            <Item Enabled="false" Id="SD_KEY" MaxLength="512" Navigable="false" Type="TextItem"/>
+            <Item Enabled="false" Id="SD_ROWID" MaxLength="18" Navigable="false" Type="TextItem"/>
+            <Item Enabled="false" Id="SD_DISPROWID" MaxLength="18" Type="TextItem"/>
+            <Item Enabled="false" Id="SD_EXISTS" MaxLength="1" Navigable="false" Type="TextItem"/>
+            <Item Id="ENABLE_ATTR_INS" MaxLength="1" Type="DisplayItem" Visible="false"/>
+            <Item Id="TRIG_ENA" MaxLength="1" Type="DisplayItem" Visible="false"/>
+            <Item Id="RENUM_SD_REC" MaxLength="1" Type="DisplayItem" Visible="false"/>
+            <Item Id="COUNT_NOT_NULL" MaxLength="30" Type="DisplayItem" Visible="false"/>
+            <Item CanvasName="G$_SDSP_CANVAS" Id="COUNT_REQD_IS_NULL" MaxLength="30" Type="DisplayItem" Visible="false"/>
+            <Item CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_VALUE_AS_CHAR_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+            <Item CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_VALUE_AS_CHAR_DBT" MaxLength="30" Navigable="false" Type="Button"/>
+            <Item CanvasName="G$_SDSP_CANVAS" Id="SDE_CLOSE_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+        </Block>
+        <Block Id="G$_SDISP" MultiRecord="true">
+            <Item CanvasName="G$_SDSP_CANVAS" Enabled="false" Id="GOVSDAV_VALUE_AS_CHAR" MaxLength="2000" Type="TextItem"/>
+            <Item Id="GOVSDAV_TABLE_NAME" MaxLength="30" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_ATTR_NAME" MaxLength="30" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_ATTR_TYPE" MaxLength="1" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_ATTR_ORDER" MaxLength="4" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_ATTR_REQD_IND" MaxLength="1" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_ATTR_DATA_TYPE" MaxLength="30" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_ATTR_DATA_LEN" MaxLength="9" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_ATTR_DATA_SCALE" MaxLength="3" Type="DisplayItem"/>
+            <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_SDSP_CANVAS" Enabled="false" Id="GOVSDAV_ATTR_INFO" MaxLength="1024" Navigable="false" Type="TextItem"/>
+            <Item Id="GOVSDAV_ATTR_BASE_COL" MaxLength="30" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_DISC_TYPE" MaxLength="1" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_DISC_METHOD" MaxLength="1" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_DISC_VALIDATION" MaxLength="1024" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_PK_PARENTTAB" MaxLength="512" Type="DisplayItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_SDSP_CANVAS" Enabled="false" Id="GOVSDAV_ATTR_PROMPT_DISP" MaxLength="100" Type="TextItem"/>
+            <Item Id="GOVSDAV_ATTR_PROMPT" MaxLength="50" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_DISC" MaxLength="64" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_DESC" MaxLength="64" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_ROWID" MaxLength="18" Type="DisplayItem"/>
+            <Item Id="REQD_IS_NULL" MaxLength="1" Type="DisplayItem"/>
+            <Item Id="IS_LAST_IDX" MaxLength="1" Type="DisplayItem"/>
+            <Item Id="GOVSDAV_SDDC_CODE" MaxLength="10" Type="DisplayItem" Visible="false"/>
+            <Item Id="GOVSDAV_LOV_FORM" MaxLength="30" Type="DisplayItem" Visible="false"/>
+            <Item Id="GOVSDAV_LOV_TABLE_OVRD" MaxLength="30" Type="DisplayItem" Visible="false"/>
+            <Item Id="GOVSDAV_LOV_ATTR_OVRD" MaxLength="30" Type="DisplayItem" Visible="false"/>
+            <Item Id="GOVSDAV_LOV_CODE_TITLE" MaxLength="255" Type="DisplayItem" Visible="false"/>
+            <Item Id="GOVSDAV_LOV_DESC_TITLE" MaxLength="255" Type="DisplayItem" Visible="false"/>
+        </Block>
+        <Block Id="G$_VPDI_BLOCK">
+            <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem"/>
+            <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+            <Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button"/>
+            <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button"/>
+            <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button"/>
+            <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button"/>
+            <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem"/>
+            <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem"/>
+        </Block>
+        <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+            <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem"/>
+            <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+            <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button"/>
+            <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem"/>
+            <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem"/>
+            <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem"/>
+            <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem"/>
+            <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem"/>
+            <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem"/>
+            <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem"/>
+        </Block>
+        <Block Id="WTVOOCT" MultiRecord="true">
+            <Item AllowUpdate="false" CanvasName="WTVOOCT_CANVAS" Id="WTVOOCT_CODE" Type="TextItem"/>
+            <Item CanvasName="WTVOOCT_CANVAS" Id="WTVOOCT_DESC" Type="TextItem"/>
+            <Item CanvasName="WTVOOCT_CANVAS" Id="WTVOOCT_COMPLETION_RANK" Type="TextItem"/>
+            <Item CanvasName="WTVOOCT_CANVAS" Id="WTVOOCT_MANUAL_IND" Type="TextItem"/>
+            <Item CanvasName="WTVOOCT_CANVAS" Id="WTVOOCT_STATUS_IND" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="WTVOOCT_CANVAS" Id="WTVOOCT_ACTIVITY_DATE" Navigable="false" Type="TextItem"/>
+            <Item AllowUpdate="false" CanvasName="WTVOOCT_CANVAS" Enabled="false" Id="WTVOOCT_USER_ID" Navigable="false" Type="TextItem"/>
+        </Block>
+    </Logic>
+</FormStructure>

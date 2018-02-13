@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+ 	<panel class="StackedCanvas" name="WBSCFRM_1_CANVAS" menu="G$_DEFAULT_PM" width="100%">
+    <interactionBlock name="WBSCFRM"/>
+        <collapsiblepanel label="Scholarship Form Assignment" name="cpanelWbscfrm" width="100%">
+            <gridview block="WBSCFRM" name="grdWbscfrm" width="100%">
+                <viewheader>
+                    <viewcolumn datatype="String" label="Scholarship Code" maxlength="10" member="WBSCFRM_SCHP_CODE" required="true" width="70px" case="upper"/>
+                    <viewcolumn datatype="String" label="Form Code" maxlength="10" member="WBSCFRM_SCHF_CODE" required="true" width="70px" case="upper"/>
+                    <viewcolumn datatype="String" label="Start Term" maxlength="6" member="WBSCFRM_START_TERM" required="true" width="50px" case="upper"/>
+                    <viewcolumn datatype="String" label="End Term" maxlength="6" member="WBSCFRM_END_TERM" required="true" width="50px" case="upper"/>
+                    <viewcolumn datatype="Date" label="Assignment Date" member="WBSCFRM_ASSIGN_DATE" required="true" width="50px" case="upper">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="Date" label="Activity Date" formatmask="DD-MON-YYYY" case="upper" member="WBSCFRM_ACTIVITY_DATE" required="false" width="50px">
+                        <editor>
+                            <calendar/>
+                        </editor>
+                    </viewcolumn>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

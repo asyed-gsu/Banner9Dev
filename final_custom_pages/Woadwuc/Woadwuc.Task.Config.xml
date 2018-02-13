@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- task parts -->
+	<b:import resource="classpath:/net/hedtech/banner/student/gsu/student/Woadwuc/parts/goqolib/Goqolib.TaskPart.Import.xml"/>
+	<!-- library resources -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	<!-- model definition -->
+	<b:import resource="classpath:/net/hedtech/banner/student/gsu/student/Woadwuc/model/WOADWUC.Model.Config.xml"/>
+	
+	<task id="WOADWUC.Task.Config" name="WOADWUC">
+		<baseTaskConfiguration config="BASE.Task.Config"/>		
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.student.gsu.student.Woadwuc.WoadwucTask</taskClass>		
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/student/gsu/student/Woadwuc/WoadwucStruct.xml</taskResources>
+		
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.student.gsu.student.Woadwuc.services.WoadwucServices</services>
+			<attachedLibraries>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		
+		<!-- model -->
+		<formModelConfiguration config="WOADWUC.Model.Config"/>
+		
+		<formController>net.hedtech.banner.student.gsu.student.Woadwuc.controller.WoadwucFormController</formController>
+		<blockControllers>
+			<block name="FORM_HEADER">net.hedtech.banner.student.gsu.student.Woadwuc.controller.FormHeaderController</block>
+			<block  name="WORDWUC">net.hedtech.banner.student.gsu.student.Woadwuc.controller.WordwucController</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.student.gsu.student.Woadwuc.controller.ButtonControlBlockController</block>
+			<block  name="G$_OPT_BLOCK">net.hedtech.banner.student.gsu.student.Woadwuc.controller.GOptBlockController</block>
+		</blockControllers>
+	</task>
+</b:beans>

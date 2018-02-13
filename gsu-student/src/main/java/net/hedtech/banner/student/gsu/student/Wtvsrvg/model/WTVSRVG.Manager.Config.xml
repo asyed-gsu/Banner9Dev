@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="WTVSRVG.Manager.Config" name="WTVSRVG">
+		<items>
+		
+			<item name="WTVSRVG_CODE" logicalName="wtvsrvgCode" type="String" physicalName="WTVSRVG_CODE" key="true">
+			</item>
+			<item name="WTVSRVG_DESC" logicalName="wtvsrvgDesc" type="String" physicalName="WTVSRVG_DESC">
+			</item>
+			<item name="WTVSRVG_ACTIVITY_DATE" logicalName="wtvsrvgActivityDate" type="java.util.Date" physicalName="WTVSRVG_ACTIVITY_DATE">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.gsu.student.Wtvsrvg.model.WtvsrvgAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[WTVSRVG_CODE]]></defaultOrderByClause>
+		
+	</manager>
+</b:beans>

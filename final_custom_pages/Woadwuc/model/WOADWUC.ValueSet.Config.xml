@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="ALL_USERCLASS_RG.ValueSet.Config" name="ALL_USERCLASS_RG">
+		<columns>
+			<column name="GTVSDAX_EXTERNAL_CODE" type="String" size="0"/>
+			<column name="GTVSDAX_DESC" type="String" size="0"/>
+		</columns>
+		<query><![CDATA[select GTVSDAX_EXTERNAL_CODE, GTVSDAX_DESC from gtvsdax where GTVSDAX_INTERNAL_CODE = 'WORDWUC' and  GTVSDAX_INTERNAL_CODE_GROUP ='USER_CLASS' order by 1]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+</b:beans>

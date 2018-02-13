@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="STVLEVL_RG.ValueSet.Config" name="STVLEVL_RG">
+    <columns>
+		<column name="STVLEVL_CODE" type="String" size="2"/>
+		<column name="STVLEVL_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvlevl_code, stvlevl_desc FROM stvlevl where stvlevl_code in (select gtvsdax_external_code from gtvsdax where gtvsdax_internal_code = 'WDLEVL') order by stvlevl_code
+	]]></query>
+	<parameters>
+	</parameters>
+</valueSet>
+</b:beans>

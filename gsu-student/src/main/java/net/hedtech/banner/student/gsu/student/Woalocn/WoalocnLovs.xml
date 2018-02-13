@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov  AutoSelect="true" RecordGroup="WTVLOCN_RG" Height="500" UseHeight="true" Width="400" UseWidth="true" Title="Location (WTVLOCN)" Name="LOCN_CODE_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="Code" DataMember="WTVLOCN_CODE"/>
+            <Column Width="100" Title="Desc" DataMember="WTVLOCN_DESC"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="STVTPRT_RG" Height="500" Width="400" Title="Transcript Type - STVTPRT" Name="STVTPRT_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="Code" DataMember="STVTPRT_CODE"/>
+            <Column Width="50" Title="Desc" DataMember="STVTPRT_DESC"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="GTVPRNT_RG" Height="500" Width="400" Title="Printer Name - GTVPRNT" Name="GTVPRNT_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="Code" DataMember="GTVPRNT_CODE"/>
+            <Column Width="50" Title="Desc" DataMember="GTVPRNT_DESC"/>     
+            <Column Width="50" Title="Printer Command" DataMember="GTVPRNT_PRINTER_COMMAND"/>    
+            <Column Width="50" Title="Activity Date" DataMember="GTVPRNT_ACTIVITY_DATE"/>    
+        </Columns>
+    </Lov>    
+</Lovs>

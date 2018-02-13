@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov AutoSelect="true" RecordGroup="WTVSRVY_RG" Height="500" Width="400" Title="Survey Validation (WTVSRVY)" Name="WTVSRVY_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="Code" DataMember="WTVSRVY_CODE"/>
+            <Column Width="50" Title="Description" DataMember="WTVSRVY_DESC"/>
+        </Columns>
+    </Lov>
+</Lovs>

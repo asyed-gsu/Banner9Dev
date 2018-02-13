@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/gsu/student/Wtvdeml/WtvdemlAlerts.xml" LovDataPath="/net/hedtech/banner/student/gsu/student/Wtvdeml/WtvdemlLovs.xml" Name="WTVDEML">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Title="Distribution Email Validation Form" Url="net/hedtech/banner/student/gsu/student/Wtvdeml/views/ViewMainWindow">
+            <ContentCanvas Id="WTVDEML_CANVAS"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="WTVDEML" MultiRecord="true">
+            <Item CanvasName="WTVDEML_CANVAS" Id="WTVDEML_CODE" Type="TextItem"/>
+            <Item CanvasName="WTVDEML_CANVAS" Id="WTVDEML_DESC" Type="TextItem"/>
+            <Item CanvasName="WTVDEML_CANVAS" Id="WTVDEML_COLL_CODE" Lov="LOV_STVCOLL" Type="TextItem"/>
+            <Item CanvasName="WTVDEML_CANVAS" Id="WTVDEML_DEPT_CODE" Lov="LOV_STVDEPT" Type="TextItem"/>
+            <Item AllowInsert="false" AllowUpdate="false" CanvasName="WTVDEML_CANVAS" Enabled="false" Id="WTVDEML_ACTIVITY_DATE" Type="TextItem"/>
+            <Item Id="WTVDEML_USER_ID" Type="TextItem"/>
+            <Item Id="WTVDEML_DATA_ORIGIN" Type="TextItem"/>
+            <Item Id="WTVDEML_SURROGATE_ID" Type="TextItem"/>
+            <Item Id="WTVDEML_VERSION" Type="TextItem"/>
+            <Item Id="WTVDEML_VPDI_CODE" Type="TextItem"/>
+        </Block>
+    </Logic>
+</FormStructure>

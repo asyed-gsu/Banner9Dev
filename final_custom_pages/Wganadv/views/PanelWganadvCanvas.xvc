@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <panel class="ContentCanvas" height="100%" name="WGANADV_CANVAS" width="100%" menu="G$_DEFAULT_PM">
+        <interactionBlock name="WGRNADV"/>
+        
+        <collapsiblepanel label="mainWindow.title" name="cpanelWgrnadv" width="100%">
+            <gridview block="WGRNADV" name="grdWgrnadv" width="100%">
+                <viewheader>
+                    <viewcolumn datatype="String" label="wganadv.column.label" maxlength="90" member="WGRNADV_ADVISOR_EMAIL" width="500px"/>
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    
+    </panel>
+</config>

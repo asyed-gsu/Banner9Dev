@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- base task definition -->
+	<b:import resource="classpath:/net/hedtech/general/common/forms/Base.Task.Config.xml"/>
+	<!-- task parts -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/Goqolib.TaskPart.Config.xml"/>
+	<!-- library resources -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	<!-- model definition -->
+	<b:import resource="classpath:/net/hedtech/banner/student/gsu/student/Wsaopti/model/WSAOPTI.Model.Config.xml"/>
+	
+	<task id="WSAOPTI.Task.Config" name="WSAOPTI">
+		<baseTaskConfiguration config="BASE.Task.Config"/>		
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.student.gsu.student.Wsaopti.WsaoptiTask</taskClass>		
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/student/gsu/student/Wsaopti/WsaoptiStruct.xml</taskResources>
+		
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.student.gsu.student.Wsaopti.services.WsaoptiServices</services>
+			<attachedLibraries>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		
+		<!-- model -->
+		<formModelConfiguration config="WSAOPTI.Model.Config"/>
+		
+		<formController>net.hedtech.banner.student.gsu.student.Wsaopti.controller.WsaoptiFormController</formController>
+		<blockControllers>
+			<block name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.student.gsu.student.Wsaopti.controller.ButtonControlBlockController</block>
+			<block name="WSROPTI">net.hedtech.banner.student.gsu.student.Wsaopti.controller.WsroptiController</block>
+			<block name="KEY_BLOCK">net.hedtech.banner.student.gsu.student.Wsaopti.controller.KeyBlockController</block>
+			<block name="FORM_HEADER">net.hedtech.banner.student.gsu.student.Wsaopti.controller.FormHeaderController</block>
+		</blockControllers>
+	</task>
+</b:beans>

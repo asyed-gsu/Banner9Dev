@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov RecordGroup="LABL_CODE_RG" Height="500" UseHeight="true" Width="400" UseWidth="true" Title="Label Code(WTRTRTT)" Name="LABL_CODE_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="Label Code" DataMember="WTRTRTT_LABL_CODE"/>
+            <Column Width="50" Title="TPRT Code" DataMember="WTRTRTT_TPRT_CODE"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="STVTPRT_RG" Height="500" UseHeight="true" Width="400" UseWidth="true" Title="Transcript Type Validation(STVTPRT)" Name="STVTPRT_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="TPRT Code" DataMember="STVTPRT_CODE"/>
+            <Column Width="50" Title="Description" DataMember="STVTPRT_DESC"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="STVTRTG_RG" Height="500" Width="400" Title="TRTG Code Validation (WTVTRTG)" Name="STVTRTG_LOV">
+        <Columns>
+            <Column ReturnItem="GLOBAL.VALUE" Width="50" Title="TRTG Code" DataMember="WTVTRTG_CODE"/>
+        </Columns>
+    </Lov>
+</Lovs>
