@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Lovs>
-	<Lov AutoSelect="true" Height="267" Name="SCHP_CODE_LOV" RecordGroup="SCHP_CODE_RG" Title="Scholarship Code Validation (WTVSCHP)" Width="575">
-		<Columns>
-			<Column DataMember="WTVSCHP_CODE" ReturnItem="GLOBAL.VALUE"  Title="Code" Width="77"/>
-			<Column DataMember="WTVSCHP_DESC" Title="Desc" Width="64"/>
-		</Columns>
-	</Lov>
-</Lovs>
